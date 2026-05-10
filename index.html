@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>《祂说》生命信仰体系</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 引入黑色主题样式 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
 </head>
 <body>
@@ -13,12 +12,19 @@
     window.$docsify = {
       name: '《祂说》',
       repo: '',
-      loadSidebar: true, // 开启侧边栏自动加载
-      subMaxLevel: 2,    // 抓取 Markdown 里的二级标题显示在侧边栏
-      homepage: '20191029.md', // 默认首页显示你的哲学体系
+      // 1. 核心配置：开启侧边栏
+      loadSidebar: true, 
+      // 2. 建议开启：导航到新页面时自动回到顶部
+      auto2top: true,
+      // 3. 侧边栏层级：抓取 Markdown 里的二级标题显示在侧边栏
+      subMaxLevel: 2,    
+      // 4. 别名配置（可选）：确保默认路径能正确指向你的首页文件
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      homepage: '20191029.md', 
     }
   </script>
-  <!-- Docsify 核心脚本 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-</head>
+</body>
 </html>
